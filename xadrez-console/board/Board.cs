@@ -6,6 +6,10 @@ public class Board(int rows, int columns)
 {
     public int Rows { get; set; } = rows;
     public int Columns { get; set; } = columns;
-    private readonly Piece[,] pieces = new Piece[rows, columns];
+    private Piece[,] Pieces = new Piece[rows, columns];
 
+    public Piece Piece(int row, int column)
+    {
+        return Pieces[row, column];
+    }
 }
