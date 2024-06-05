@@ -3,8 +3,10 @@
 namespace xadrez_console;
 class Program {
     public static void Main(string[] args) {
-        Position p = new (1, 2);
-        Console.WriteLine("Position: " + p);
+        Board bd = new (8, 8);
+
+
+        Console.WriteLine("Position: " + bd);
         Console.ReadLine();
     }
 }
