@@ -18,6 +18,19 @@ public class Board(int rows, int columns)
         return Pieces[pos.Row, pos.Column];
     }
 
+    public Piece RemovePiece(Position pos)
+    {
+        if (Piece(pos) == null)
+        {
+            return null;
+        } else {
+            Piece aux = Piece(pos);
+            aux.Position = null;
+            Pieces[pos.Row, pos.Column] = null;
+            return aux;
+        }
+    }
+
     public void PutPiece(Piece p, Position pos)
     {
         if (ExistPiece(pos))

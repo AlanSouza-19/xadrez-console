@@ -6,4 +6,9 @@ public class Piece(Board board, Color color)
     public Color Color { get; protected set; } = color;
     public int NumberOfMoves { get; protected set; } = 0;
     public Board Board { get; protected set; } = board;
+
+    public void IncrementNumberOfMoviments()
+    {
+        NumberOfMoves++;
+    }
 }
